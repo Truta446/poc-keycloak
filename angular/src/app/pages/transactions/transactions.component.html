@@ -1,0 +1,31 @@
+<div class="section">
+  <header>
+    <h1>Sci-Fi Book List</h1>
+    <p class="description">
+      This component uses a service to fetch transactions from a mocked server.
+      It is designed to test the Bearer Interceptor feature.<br />
+      Open the developer tools in your browser and inspect the request to
+      <code>http://localhost:8890/transactions</code>. The request should
+      include the <code>Authorization</code> header with the Bearer token.
+    </p>
+  </header>
+
+  <main>
+    @if (transactions.length === 0) {
+    <p class="no-transactions">
+      No transactions found. Did you start the
+      <code>example-server</code> project?
+    </p>
+    } @else {
+    <ul class="transaction-list">
+      @for (transaction of transactions; track transaction.id) {
+      <li class="transaction-item">
+        <strong>{{ transaction.name }}</strong> | {{ transaction.amount }} ({{
+          transaction.payment_date
+        }})
+      </li>
+      }
+    </ul>
+    }
+  </main>
+</div>

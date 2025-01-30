@@ -1,0 +1,18 @@
+.no-transactions {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-item {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
